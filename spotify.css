@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
+.trend-songs,
+.artist-img,
+.popular,
+.library{
+  flex-shrink: 0;
+}
+
 body{
     background-color: black;
     color: whitesmoke; 
@@ -29,6 +36,18 @@ nav a:hover{
      font-weight: 600;
      color: white;
 }
+.nav-search{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-search input{
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  border-radius: 20px;
+}
 
 .navbar{
      display: flex;
@@ -47,8 +66,9 @@ nav a:hover{
     display: flex;
     flex-wrap: nowrap;
    margin: 2px;
-   flex-shrink: 1;
-   flex-grow: 1;
+   flex-shrink: 0;
+   width: 100%;
+   /* flex-grow: 1; */
 
 }
 .library{
@@ -58,6 +78,8 @@ nav a:hover{
     flex-direction: column;
      gap: 30px;
      padding: 20px;
+     flex-shrink: 0;
+     width: 340px;
 }
 
 .songs-box{
@@ -304,13 +326,6 @@ nav a:hover{
 /* ================= MOBILES ================= */
 
 @media (max-width:768px){
-
-.navbar{
-    flex-direction:column;
-    height:auto;
-    gap:15px;
-    padding:15px;
-}
 
 .container{
     flex-direction:column;
