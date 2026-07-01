@@ -11,39 +11,39 @@ function toggleLang() {
 function playSong(element) {
 
   const card = element.closest(".trend-songs") || element;
-  const audio = card.querySelector("audio");
+  const audio1 = card.querySelector("audio");
   const btn = card.querySelector(".playbutton");
 
   
   document.querySelectorAll("audio").forEach(a => {
-    if (a !== audio) {
+    if (a !== audio1) {
       a.pause();
       a.currentTime = 0;
 
-      const otherCard = a.closest(".trend-songs");
-      if (otherCard) {
-        const otherBtn = otherCard.querySelector(".playbutton");
-        if (otherBtn) otherBtn.innerText = "▶";
+      const othercard = a.closest(".trend-songs");
+      if (othercard) {
+        const otherbtn = othercard.querySelector(".playbutton");
+        if (otherbtn) otherbtn.innerText = "▶";
       }
     }
     
   });
 
-  if (audio.paused) {
-    audio.play();
+  if (audio1.paused) {
+    audio1.play();
     btn.innerText = "⏸";
   } else {
-    audio.pause();
+    audio1.pause();
     btn.innerText = "▶";
   }
   
-  audio.onended = () => {
+  audio1.onended = () => {
 
-    const nextCard = card.nextElementSibling;
+    const nextcard = card.nextElementSibling;
 
-    if (nextCard && nextCard.classList.contains("trend-songs")) {
+    if (nextcard && nextcard.classList.contains("trend-songs")) {
 
-      playSong(nextCard);
+      playSong(nextcard);
 
     }
 };

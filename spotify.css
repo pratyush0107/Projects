@@ -7,13 +7,13 @@ body{
     font-weight: 400;
     font-style: normal;
      overflow-x: hidden;
-     max-height: fit-content;
-     overflow-y: hidden;
+     /* max-height: fit-content;
+     overflow-y: hidden; */
 }
 * {
   margin: 0;
   padding: 0;
-  
+  box-sizing: border-box;
 }
 
 nav img{
@@ -37,7 +37,7 @@ nav a:hover{
    flex-shrink: 1;
    flex-grow: 1;
   height: 70px;
-  align-content: flex start;
+  align-content: flex-start;
   align-items: center;
   list-style-type: none;
   justify-content: space-around;
@@ -53,7 +53,7 @@ nav a:hover{
 }
 .library{
     background-color:rgba(255, 255, 255, 0.1) ;
-    width: 340px; height: 600px; border-radius:4px;
+    min-width: 340px; min-height: 600px; border-radius:4px;
     display: flex;
     flex-direction: column;
      gap: 30px;
@@ -83,8 +83,10 @@ nav a:hover{
   color: black;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  height: 600px;
-  width: 800px;
+  /* height: 600px;
+  width: 800px; */
+     width:min(800px,95vw);
+    height:min(600px,90vh);
   border-radius: 20px;
   background-color: black;
 
@@ -262,4 +264,145 @@ nav a:hover{
 .hidden-showall-songs{
  height: 640px;
  width: 920px;
+}
+/* ================= TABLETS ================= */
+
+@media (max-width:1024px){
+
+.container{
+    flex-direction:column;
+}
+
+.library{
+    width:100%;
+    min-height:auto;
+}
+
+.songs-box{
+    width:100%;
+    margin-left:0;
+    padding:15px;
+}
+
+.hidden-showall-songs{
+    width:100%;
+    height:auto;
+}
+
+.trend-box,
+.artist-box,
+.popular-albums-box{
+    max-width:100%;
+}
+
+.langbox{
+    width:95%;
+    height:90vh;
+}
+
+}
+/* ================= MOBILES ================= */
+
+@media (max-width:768px){
+
+.navbar{
+    flex-direction:column;
+    height:auto;
+    gap:15px;
+    padding:15px;
+}
+
+.container{
+    flex-direction:column;
+}
+
+.library{
+    width:100%;
+    padding:15px;
+}
+
+.songs-box{
+    width:100%;
+    padding:10px;
+    margin:0;
+}
+
+.trend,
+.artist,
+.popular-albums{
+    height:auto;
+}
+
+.trend-box,
+.artist-box,
+.popular-albums-box{
+    gap:15px;
+}
+
+.trend-songs,
+.artist-img,
+.popular{
+    width:160px;
+    height:190px;
+}
+
+.trend-songs img,
+.artist-img img{
+    height:150px;
+}
+
+.playbutton{
+    width:42px;
+    height:42px;
+}
+
+.langbox{
+    width:95%;
+    height:90vh;
+}
+
+.chooselang{
+    width:100%;
+    padding:20px;
+}
+
+.languages{
+    justify-content:center;
+    gap:15px;
+}
+
+}/* ================= SMALL PHONES ================= */
+
+@media (max-width:480px){
+
+body{
+    font-size:14px;
+}
+
+.library{
+    padding:10px;
+}
+
+.trend-songs,
+.artist-img,
+.popular{
+    width:130px;
+    height:170px;
+}
+
+.trend-songs img,
+.artist-img img{
+    height:130px;
+}
+
+.playbutton{
+    width:36px;
+    height:36px;
+}
+
+.langcomp{
+    width:120px;
+    height:80px;
+}
+
 }
