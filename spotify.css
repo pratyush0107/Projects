@@ -47,6 +47,7 @@ nav a:hover{
   max-width: 400px;
   padding: 10px 15px;
   border-radius: 20px;
+  
 }
 
 .navbar{
@@ -425,6 +426,9 @@ body{
     margin-bottom: 12em;
     justify-content: space-between;
 
+}
+.navbar input {
+  width: 18em;
 }
 .navbar button{
     margin-left: 0%;
