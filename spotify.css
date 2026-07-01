@@ -107,8 +107,8 @@ nav a:hover{
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   /* height: 600px;
   width: 800px; */
-     width:min(800px,95vw);
-    height:min(600px,90vh);
+  width:min(800px,95vw);
+  height:min(600px,90vh);
   border-radius: 20px;
   background-color: black;
 
@@ -120,7 +120,7 @@ nav a:hover{
     padding: 50px;
     color: aliceblue;
     border-bottom: solid white;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
 }
 
 .languages{
